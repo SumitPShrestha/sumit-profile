@@ -1,0 +1,22 @@
+<section id="experience">
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+    <div class="timeline">
+      <div *ngFor='let entry of timeLine;let i = index'>
+        <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+          <div class="content">
+            <h2>{{entry.year}}</h2>
+            <h3>{{entry.post}}</h3><h5>{{entry.company}}</h5>
+            <span *ngFor="let s of entry?.sub">
+              <h4 *ngIf="s?.title">{{s?.title}}</h4>
+              <ul>
+                <li *ngFor='let d of s.details'>{{d}}</li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

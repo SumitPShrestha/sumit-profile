@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sumit-profile:build:production"
+              "buildTarget": "sumit-profile:build:production"
             },
             "development": {
-              "browserTarget": "sumit-profile:build:development"
+              "buildTarget": "sumit-profile:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sumit-profile:build"
+            "buildTarget": "sumit-profile:build"
           }
         },
         "test": {
