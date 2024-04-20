@@ -9,10 +9,14 @@ import {ExperienceComponent} from "./experience/experience.component";
 import {SkillsComponent} from "./skills/skills.component";
 import {ContactComponent} from "./contact/contact.component";
 import {CommonModule} from "@angular/common";
+import {AuthModule} from "./auth/auth.module";
+import {HomeComponent} from "./home/home.component";
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     TopNavComponent,
     AboutComponent,
     ExperienceComponent,
@@ -22,7 +26,9 @@ import {CommonModule} from "@angular/common";
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
